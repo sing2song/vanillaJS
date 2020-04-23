@@ -1,12 +1,13 @@
 ///////////////////////////
 //Day 01
-
+/*
 console.log('Im Working. Im JS. Im Beautiful. Imworth it');
 console.log("hello");
 console.log('hello');
-
+*/
 ///////////////////////////
 //Day 02
+/*
 const array=[["1","A"],["2","B"],["3","C"]];//배열안에 배열
 console.log(array);
 
@@ -37,7 +38,7 @@ age:55
 };//객체 안에 객체
 
 console.log(object);
-
+*/
 ///////////////////////////
 //Day 03
 /*
@@ -48,6 +49,7 @@ const nicoInfo=sayHello("nico",15);
 
 console.log(nicoInfo);//정의되지않음! return값이 없어서!
 */
+/*
 function sayHello(name,age){
     return `Hello im ${name}! im ${age} years old.`;
 }
@@ -93,17 +95,53 @@ function handleResize(){
 
 window.addEventListener("resize",handleResize);
 //handleResize()라고 쓰면 바로 호출의 의미로 resize하지 않아도 log가 찍히게 됨
+*/
 
-title.addEventListener("mouseenter",function(){
-    title.innerHTML="The mouse is here!";
-    title.style.color='#1abc9c';
-  })
-title.addEventListener("mouseleave",function(){
-    title.innerHTML="The mouse is gone!";
-    title.style.color='#3498db';
-  })
+///////////////////////////
+//Day 04
+const title=document.getElementById("title");
+//document.querySelector("#title");
+const CLICKED_CLASS="clicked";
 
-  window.addEventListener("contextmenu",function(){
-    title.innerHTML="That was a right click!";
-    title.style.color='#f39c12';
-  })
+function handleClick(){
+    /*
+    const hasClass=title.classList.contains(CLICKED_CLASS);
+    //true or false로 줄것임
+    if(!hasClass){
+        //title.className=CLICKED_CLASS;
+        title.classList.add(CLICKED_CLASS);
+    }else{
+        //title.className="";//empty
+        title.classList.remove(CLICKED_CLASS);
+    }
+    */
+   title.classList.toggle(CLICKED_CLASS);
+   //CLICKED_CLASS가 있으면 add 없으면 remove
+}
+/*
+const BASE_COLOR="#34495e";
+const OTHER_COLOR="#7f8c8d";
+
+function handleClick(){
+    const currentColor=title.style.color;
+    if(currentColor==BASE_COLOR){
+        title.style.color=OTHER_COLOR;
+    }else{
+        title.style.color=BASE_COLOR;
+    }
+}
+*/
+function init(){
+    //title.style.color=BASE_COLOR;
+    title.addEventListener("click",handleClick)
+}
+init();//호출
+
+function handleOffline(){
+    console.log("Bye Bye");
+}
+function handleOnline(){
+    console.log("Welcome back");
+}
+window.addEventListener("offline",handleOffline);//wifi끄니까 로그뜸
+window.addEventListener("online",handleOnline);
