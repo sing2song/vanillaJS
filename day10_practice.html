@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <h1>Random Number Game</h1>
+    <h2>Generate a number between 0 and <span class="selectNum"></span></h2>
+    <form class="numberForm">
+        <input
+        type="range"
+        id="randomNum"
+        name="randomNum"
+        min="0"
+        max="200"
+        step="5"
+        style="width: 200px;"
+        />
+    <br>
+      Guess the number :
+      <input type="number" class="numberText" />
+      <input type="submit" class="playBtn" value="Play!" />
+    </form>
+    <div class="resultDiv"></div>
+    <script src="day10_practice.js"></script>
+  </body>
+</html>
