@@ -1,22 +1,19 @@
-const select = document.querySelector(".country");
+const select = document.querySelector(".js-select");
 const Country="Country";
 
+function handleChange(){
+    const optionValue=select.value;
+    localStorage.setItem(Country,optionValue);   
+}
 
-function init(){    
+function init(){   
 
     const currentCountry = localStorage.getItem(Country);
-    if(currentCountry===null){
-        select.addEventListener('change',function(){
-            const optionValue=select.value;
-            localStorage.setItem(Country,optionValue);            
-        });
-/*
-        select.addEventListener('change',(event)=>{
-            const optionValue=`${event.target.value}`;
-            localStorage.setItem(Country,optionValue);            
-        });*/
-    }else{
-        select.value=currentCountry;        
-    }
+    if(currentCountry){
+        const option = document.querySelector(`option[value="${currentCountry}"]`);
+        option.selected = true;       
+    }    
 }
+
 init();
+select.addEventListener("change",handleChange);

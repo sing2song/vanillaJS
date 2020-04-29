@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>Something</title>
+        <meta charset="utf-8">
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
@@ -18,7 +19,7 @@
         </form>
         <h4 class="js-greetings greeting"></h4>
 
-        <select class="country">
+        <select class="js-select">
             <option value="">--- Choose Your Country ---</option>
             <option value="Korea">Korea</option>
             <option value="Greece">Greece</option>
@@ -26,8 +27,15 @@
             <option value="Finland">Finland</option>
         </select>
 
+        <form class="js-toDoForm">
+            <input type="text" placeholder="Write a to do"/>
+        </form>
+        <ul class="js-toDoList">
+
+        </ul>
         <script src="clock.js" ></script>
         <script src="greeting.js"></script>
         <script src="from.js"></script>
+        <script src="todo.js"></script>
     </body>
 </html>
