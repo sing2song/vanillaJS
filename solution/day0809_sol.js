@@ -1,4 +1,3 @@
-import "./styles.css";
 
 const pendingList = document.getElementById("js-pending"),
   finishedList = document.getElementById("js-finished"),

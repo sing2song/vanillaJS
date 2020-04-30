@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="src/styles.css" />
+  </head>
+
+  <body>
+    <h1>Random Number Game</h1>
+    <h2>Generate a number between 0 and <span class="max">0</span></h2>
+    <div class="slidecontainer">
+      <input type="range" min="0" max="200" value="0" class="slider" />
+    </div>
+    <label for="quantity">Guess the number</label>
+    <input type="number" id="quantity" class="number" min="1" max="200" />
+    <button type="button" class="play">Play!</button>
+    <div class="content"></div>
+    <b><div class="result"></div></b>
+    <script src="day10_great.js"></script>
+  </body>
+</html>
