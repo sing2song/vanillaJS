@@ -1,0 +1,26 @@
+
+.print{
+    width: 93%;
+   padding: 10px;
+   margin: 5px;
+   text-align: right;
+ 
+}
+#calculator{
+    width: 500px;
+    margin: 30px auto;
+    background-color: black;
+    position: relative;
+    
+}
+#calculator button{
+   color: white;
+   background-color: gray;
+   margin: 5px;
+   padding: 10px;
+   width: 90%;
+   border-radius: 5px;
+   font-size: 15pt;
+   cursor: pointer;
+   border: none;
+}

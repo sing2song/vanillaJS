@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="day11_practice.css">
+  </head>
+
+  <body>
+
+     <table id="calculator">
+      <tr>
+        <td colspan="3">
+          <input type="text" class="print" >
+        </td>
+        <td><button id="clear" onclick="clear()" style="background-color: orange;">C</button></td>
+      </tr>  
+      
+      <tr>
+        <td><button onclick="getNumber(7)">7</button></td>
+        <td><button onclick="getNumber(8)">8</button></td>
+        <td><button onclick="getNumber(9)">9</button></td>
+        <td><button onclick="getOperator('+')" style="background-color: orange;">+</button></td>
+      </tr>  
+      <tr>
+        <td><button onclick="getNumber(4)">4</button></td>
+        <td><button onclick="getNumber(5)">5</button></td>
+        <td><button onclick="getNumber(6)">6</button></td>
+        <td><button onclick="getOperator('-')" style="background-color: orange;">-</button></td>
+      </tr>  
+      <tr>
+        <td><button onclick="getNumber(1)">1</button></td>
+        <td><button onclick="getNumber(2)">2</button></td>
+        <td><button onclick="getNumber(3)">3</button></td>
+        <td><button onclick="getOperator('*')" style="background-color: orange;">*</button></td>
+      </tr>  
+      <tr>
+        <td colspan="2"><button onclick="getNumber(0)">0</button></td>
+        <td><button onclick="compute()" style="background-color: orange;">=</button></td>
+        <td><button onclick="getOperator('/')" style="background-color: orange;">/</button></td>
+      </tr>   
+    </table>
+
+    <script src="day11_practice.js"></script>
+  </body>
+</html>
